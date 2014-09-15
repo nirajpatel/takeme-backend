@@ -17,4 +17,6 @@ takeme: Backend
 
 **Experience:** I have 5 years of Java experience, and 2 years of Java backend development experience. I chose to use the Spring framework as that was the framework I used as an intern at HomeAway.
 
+**Extension points:** 1, create MVC mocks to test controllers. 2, create unit tests. 
+
 **Credit:** http://jsonschema2pojo.org - Used to create POJO models from Google Maps Directions API and Google Maps Geolocation API JSON response. Creating models from scratch would have been very tedious. http://developers.google.com - Used to provide public transportation data and geolocation data to web application
