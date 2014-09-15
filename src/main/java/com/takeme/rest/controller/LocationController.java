@@ -12,7 +12,7 @@ import com.takeme.rest.output.model.LocationResponse;
 
 /**
  * Controller that exposes the Location class that consumes @latitude @longitude
- * reverse geocodes @latitude @longitude using Google Maps Directions API,
+ * reverse geocodes @latitude @longitude using Google Maps Geolocation API,
  * and returns a full address.
  * 
  */

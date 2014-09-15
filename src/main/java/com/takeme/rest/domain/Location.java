@@ -16,7 +16,7 @@ import com.takeme.rest.domain.location.model.Result;
 import com.takeme.rest.output.model.LocationResponse;
 
 /**
- * Location class that reverse geocodes @latitude @longitude using Google Maps Directions API.
+ * Location class that reverse geocodes @latitude @longitude using Google Maps Geolocation API.
  * 
  */
 public class Location {
@@ -30,7 +30,7 @@ public class Location {
 	private String zipcode;
 
 	/*
-	 * Constructor for a Location object. Sends query to Google Maps Directions API and parses the
+	 * Constructor for a Location object. Sends query to Google Maps Geolocations API and parses the
 	 * response.
 	 * 
 	 */
@@ -63,7 +63,7 @@ public class Location {
 	}
 	
 	/*
-	 * Sends a request to Google Maps Directions API to reverse geocode @latitude @longitude}.
+	 * Sends a request to Google Maps Geolocation API to reverse geocode @latitude @longitude}.
 	 * 
 	 */
 	private JsonObject requestReverseGeocode(String latitude, String longitude) {
