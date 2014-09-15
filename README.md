@@ -19,4 +19,4 @@ takeme: Backend
 
 **Extension points:** 1, create MVC mocks to test controllers. 2, create unit tests. 
 
-**Credit:** http://jsonschema2pojo.org - Used to create POJO models from Google Maps Directions API and Google Maps Geolocation API JSON response. Creating models from scratch would have been very tedious. http://developers.google.com - Used to provide public transportation data and geolocation data to web application.
+**Credit:** http://jsonschema2pojo.org - Used to create POJO models from Google Maps Directions API and Google Maps Geolocation API JSON response. Creating models from scratch would have been very tedious. http://developers.google.com - Used to provide public transportation data and geolocation data to web application. 
