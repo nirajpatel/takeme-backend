@@ -10,7 +10,7 @@ takeme: Backend
 2. **Domains (com.takeme.rest.domain)**
   * **Location:** Constructor takes latitude and longitude, and calls Google Maps Geolocation API to get full address.
   * **Trip:** Constructor takes origin, destination, time, and mode, and calls Google Maps Directions API to get trip itinerary.
-3. **Models:**
+3. **Models**
   * **com.takeme.rest.domain.location.model:** POJO representation of Google Maps Geolocation API response
   * **com.takeme.rest.domain.trip.model:** POJO representation of Google Maps Directions API response
   * **com.takeme.rest.output.model:** POJO respresentation of location and trip api call response
