@@ -1,6 +1,8 @@
 
 package com.takeme.rest.controller;
 
+import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -25,10 +27,15 @@ public class TripController {
 	 * 
 	 */
 	@RequestMapping(value = "/gettrip", method = RequestMethod.GET, produces="application/json")
-	public @ResponseBody TripResponse getTrip(@RequestParam("origin") String origin,
+	public @ResponseBody TripResponse getTrip(HttpServletResponse response, @RequestParam("origin") String origin,
 			@RequestParam("destination") String destination, @RequestParam("time") String time,
 			@RequestParam("mode") String mode) {		
 		Trip trip = new Trip(origin, destination, time, mode);
+		
+		response.setHeader("Access-Control-Allow-Origin", "*");
+        response.setHeader("Access-Control-Allow-Methods", "POST, GET, OPTIONS, DELETE");
+        response.setHeader("Access-Control-Max-Age", "3600");
+        response.setHeader("Access-Control-Allow-Headers", "x-requested-with");
 		
 		return trip.getTrip();		
 	}

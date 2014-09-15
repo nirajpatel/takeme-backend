@@ -1,6 +1,8 @@
 
 package com.takeme.rest.controller;
 
+import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -26,8 +28,13 @@ public class LocationController {
 	 * 
 	 */
 	@RequestMapping(value = "/getlocation", method = RequestMethod.GET, produces="application/json")
-	public @ResponseBody LocationResponse getLocation(@RequestParam("latitude") String latitude, @RequestParam("longitude") String longitude) {		
+	public @ResponseBody LocationResponse getLocation(HttpServletResponse response, @RequestParam("latitude") String latitude, @RequestParam("longitude") String longitude) {		
 		Location userLocation = new Location(latitude, longitude);
+		
+		response.setHeader("Access-Control-Allow-Origin", "*");
+        response.setHeader("Access-Control-Allow-Methods", "POST, GET, OPTIONS, DELETE");
+        response.setHeader("Access-Control-Max-Age", "3600");
+        response.setHeader("Access-Control-Allow-Headers", "x-requested-with");
 		
 		return userLocation.getUserLocation();		
 	}
